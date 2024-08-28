@@ -1,1 +1,346 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package labb5;
+
+import java.awt.Event;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseButton;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.Group;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Arc;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
+import javafx.stage.Stage;
+
+/**
+ *
+ * @author ood32
+ */
+public class Labb5 extends Application {
+    
+    @Override
+    public void start(Stage primaryStage) {
+        // for flower
+         BorderPane flower = new BorderPane();
+        // creat a rectangle 
+        Rectangle draw = new Rectangle();
+        draw.setX(20); 
+        draw.setY(40);
+        draw.setWidth(400);
+        draw.setHeight(200);
+        draw.setTranslateX(100);
+        draw.setFill(Color.WHITE);
+        
+        // creat a 1st circle
+        Circle cir = new Circle();
+        cir.setCenterX(290); 
+        cir.setCenterY(120);
+        cir.setRadius(20);
+        
+        // creat a 2nd circle
+        Circle cir2 = new Circle();
+        cir2.setCenterX(310); 
+        cir2.setCenterY(120);
+        cir2.setRadius(20);
+        
+       // creat a 3rd circle
+        Circle cir3 = new Circle();
+        cir3.setCenterX(280); 
+        cir3.setCenterY(140);
+        cir3.setRadius(20);
+        
+       // creat a 4th circle
+        Circle cir4 = new Circle();
+        cir4.setCenterX(320); 
+        cir4.setCenterY(140);
+        cir4.setRadius(20);
+        
+      // creat a 5th circle
+        Circle cir5 = new Circle();
+        cir5.setCenterX(315); 
+        cir5.setCenterY(155);
+        cir5.setRadius(20);
+        
+        
+        // creat a 6th circle
+        Circle cir6 = new Circle();
+        cir6.setCenterX(290); 
+        cir6.setCenterY(155);
+        cir6.setRadius(20);
+        
+        
+        // creat a 7th circle for seed
+        Circle cir7 = new Circle();
+        cir7.setCenterX(300); 
+        cir7.setCenterY(140);
+        cir7.setRadius(15);
+        cir7.setFill(Color.GREEN);
+        
+        
+        // creat a line of tree root
+        Line trreeroot = new Line();
+        trreeroot.setStartX(300.0f); 
+        trreeroot.setStartY(230.0f);
+        trreeroot.setEndX(300.0f);
+        trreeroot.setEndY(170.0f);
+        trreeroot.setStrokeWidth(5);
+         
+        //creat a line of branch
+        Line branch = new Line();
+        branch.setStartX(300.0f); 
+        branch.setStartY(215.0f);
+        branch.setEndX(340.0f);
+        branch.setEndY(190.0f);
+        branch.setStrokeWidth(3);
+        
+        // creat a Arc of leaf
+        Arc leaf = new Arc(330.0f,213.0f,25.0f,25.0f,72.0f,100.0f);
+        
+       // user choose the shape
+     Circle c = new Circle(300,140,95);
+     c.setFill(Color.WHITE);
+     
+//     // creat ActionEvent
+//       c.setOnMouseClicked(event -> {
+//       flower.getChildren().remove(draw);
+//       flower.getChildren().add(c);
+//       flower.getChildren().remove(c);
+//       flower.getChildren().add(draw);
+//       });
+  
+ 
+        
+        
+        
+         flower.getChildren().addAll(draw,cir,cir2,cir3,cir4,cir5,cir6,cir7,trreeroot,branch,leaf);
+         
+        // creat a HBox 
+        VBox bottun = new VBox(20);
+        HBox choose = new HBox(15);
+        Label select = new Label("Select the flower part:");
+        select.setTranslateX(200);
+        // array of combobox 
+//        String[] parts = {"Petals", "Seeds", "Stem","Leaves"};
+        // creat a combobox
+        ComboBox<String> flopart = new ComboBox<>();
+        flopart.setTranslateX(230);
+        flopart.getItems().addAll("Petals", "Seeds", "Stem","Leaves");
+        choose.getChildren().addAll(select,flopart);
+
+
+       // for color filling
+         HBox hbox = new HBox(15);
+        Label color = new Label("Fill Color:");
+        // creat a redio button
+        RadioButton R = new RadioButton("Red");
+        RadioButton G = new RadioButton("Green");
+        RadioButton B = new RadioButton("Brown");
+        ToggleGroup n = new ToggleGroup();
+        R.setToggleGroup(n);
+        G.setToggleGroup(n);
+        B.setToggleGroup(n);
+        hbox.getChildren().addAll(color,R,G,B);
+        hbox.setTranslateX(200);
+        
+        // creat a rest & strok
+        CheckBox strock = new CheckBox("Add Strock ?");
+        strock.setTranslateX(250);
+        Button rest = new Button("Reset Color");
+        rest.setTranslateX(250);
+        bottun.getChildren().addAll(choose,hbox,strock,rest);
+
+        // ActionEvent of RadioButtons
+        // action for rediobottun for red
+        R.setOnAction(e -> {
+           if (R.isSelected())
+           { String selctor = flopart.getValue();
+                     switch(selctor)
+           {
+               case "Petals":
+            cir.setFill(Color.RED);
+            cir2.setFill(Color.RED);
+            cir3.setFill(Color.RED);
+            cir4.setFill(Color.RED);
+            cir5.setFill(Color.RED);
+            cir6.setFill(Color.RED);
+                break;
+                
+             case "Seeds":
+            cir7.setFill(Color.RED);
+                break;
+                
+             case "Stem":
+            trreeroot.setStroke(Color.RED);
+                break;
+                
+            case "Leaves":
+            leaf.setFill(Color.RED);
+                break;   
+                   
+           }// end of the switch
+           
+           }// end if 
+        });
+        
+         // action for rediobottun for green
+            G.setOnAction(e -> {
+           if (G.isSelected())
+           { String selctor = flopart.getValue();
+                     switch(selctor)
+           {
+               case "Petals":
+            cir.setFill(Color.GREEN);
+            cir2.setFill(Color.GREEN);
+            cir3.setFill(Color.GREEN);
+            cir4.setFill(Color.GREEN);
+            cir5.setFill(Color.GREEN);
+            cir6.setFill(Color.GREEN);
+                break;
+                
+             case "Seeds":
+            cir7.setFill(Color.GREEN);
+                break;
+                
+             case "Stem":
+            trreeroot.setStroke(Color.GREEN);
+                break;
+                
+            case "Leaves":
+            leaf.setFill(Color.GREEN);
+                break;   
+                   
+           }// end of the switch
+           
+           }// end if 
+        });
+            
+         // action for rediobottun for brown
+            B.setOnAction(e -> {
+           if (B.isSelected())
+           { String selctor = flopart.getValue();
+                     switch(selctor)
+           {
+               case "Petals":
+            cir.setFill(Color.BROWN);
+            cir2.setFill(Color.BROWN);
+            cir3.setFill(Color.BROWN);
+            cir4.setFill(Color.BROWN);
+            cir5.setFill(Color.BROWN);
+            cir6.setFill(Color.BROWN);
+                break;
+                
+             case "Seeds":
+            cir7.setFill(Color.BROWN);
+                break;
+                
+             case "Stem":
+            trreeroot.setStroke(Color.BROWN);
+                break;
+                
+            case "Leaves":
+            leaf.setFill(Color.BROWN);
+                break;   
+                   
+           }// end of the switch
+           
+           }// end if 
+        });
+                     
+        // used mwthod consume
+        flopart.setOnKeyPressed(e ->{ 
+            if(e.getCode() == KeyCode.ENTER)
+                {e.consume();}
+                });
+                     
+                     
+                     
+    // ActionEvent for CheckBox
+        strock.setOnAction(e -> {
+       if (strock.isSelected()){ draw.setStroke(Color.BLACK); draw.setStrokeWidth(3);}
+       else {draw.setStroke(null);}});
+
+        
+     // ActionEvent for button
+        rest.setOnAction(e -> {
+        { cir.setFill(Color.BLACK); cir2.setFill(Color.BLACK);
+        cir3.setFill(Color.BLACK);cir4.setFill(Color.BLACK);
+        cir5.setFill(Color.BLACK);cir6.setFill(Color.BLACK);
+        trreeroot.setStroke(Color.BLACK); leaf.setFill(Color.BLACK);
+         cir7.setFill(Color.GREEN);}});
+    
+
+
+    // focus on the seed
+    flower.requestFocus();
+    R.setFocusTraversable(false);
+    G.setFocusTraversable(false);
+    B.setFocusTraversable(false);
+    flopart.setFocusTraversable(false);
+    rest.setFocusTraversable(false);
+    strock.setFocusTraversable(false);
+
+    // Scene & BorderPane
+    BorderPane root = new BorderPane();
+    root.setBottom(bottun);
+    root.setCenter(flower);
+    Scene scene = new Scene(root, 600, 400);
+       
+    // KeyEvent
+    scene.setOnKeyPressed(event -> {
+    KeyCode kc = event.getCode();
+       switch (kc){
+           case UP:
+               cir7.setTranslateY(cir7.getTranslateY()-5);
+               break;
+           case DOWN:
+               cir7.setTranslateY(cir7.getTranslateY()+5);
+               break;
+           case RIGHT:
+              cir7.setTranslateX(cir7.getTranslateX()+5);
+               break;
+           case LEFT:
+               cir7.setTranslateX(cir7.getTranslateX()-5);
+               break;
+       }// end of the switch
+       });//end of keyevent
+
+
+    // MouseEvent
+    draw.setOnMouseClicked(event -> {
+    draw.setFill(Color.LIGHTYELLOW);});
+//     root.setStyle("-fx-background-color:LIGHTYELLOW;");
+
+
+    // stage part
+    primaryStage.setTitle("Lab-5");
+    primaryStage.setScene(scene);
+    primaryStage.show();
+    }// end of the start method 
+
+
+    public static void main(String[] args) {
+        launch(args);
+    }// end of the main
+    
+}// end of the class Labb5
 
