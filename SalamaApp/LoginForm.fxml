@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="651.0" style="-fx-background-color: FAE6BF;" stylesheets="@../../../../../HTML%20project/CSS/styleJava.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectap.ViewControl.LoginForm_CL">
+   <children>
+      <Pane prefHeight="461.0" prefWidth="325.0" style="-fx-background-color: #e0e0e0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="103.0" layoutY="214.0" prefHeight="34.0" prefWidth="101.0" text="SALAMA" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="16.0" layoutY="263.0" lineSpacing="10.0" prefHeight="34.0" prefWidth="275.0" text="The goal of the Salama program is to keep you safe" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" />
+            <Circle fill="#fafcfd" layoutX="153.0" layoutY="101.0" radius="74.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="104.0" fitWidth="94.0" layoutX="106.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/healthcare.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" layoutX="46.0" layoutY="382.0" prefHeight="33.0" prefWidth="214.0" spacing="20.0">
+               <children>
+                  <Circle fill="#97efa6" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#c9f6a3" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#bcedf7" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#efb0f4" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#e9f2ba" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#c3dbf2" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="322.0" layoutY="45.0" prefHeight="415.0" prefWidth="325.0">
+         <children>
+            <TextField fx:id="txtUser" layoutX="18.0" layoutY="95.0" prefHeight="34.0" prefWidth="300.0" promptText="example@examle.com" style="-fx-background-color: #CECAC0; -fx-border-color: #585753;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <PasswordField fx:id="txtPass" layoutX="18.0" layoutY="182.0" prefHeight="34.0" prefWidth="300.0" promptText="Password" style="-fx-background-color: #CECAC0; -fx-border-color: #585753;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </PasswordField>
+            <Button layoutX="53.0" layoutY="341.0" mnemonicParsing="false" onAction="#isSignUp" prefHeight="44.0" prefWidth="220.0" style="-fx-background-color: #F9F1E0;" text="Sign up">
+               <font>
+                  <Font name="Times New Roman" size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btSign" layoutX="53.0" layoutY="280.0" mnemonicParsing="false" onAction="#isSignIn" prefHeight="44.0" prefWidth="220.0" style="-fx-background-color: #F9F1E0;" text="Sign in">
+               <font>
+                  <Font name="Times New Roman" size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="lblMSG" layoutX="22.0" layoutY="235.0" prefHeight="34.0" prefWidth="282.0" textAlignment="CENTER" />
+            <Label layoutX="14.0" layoutY="51.0" prefHeight="7.0" prefWidth="135.0" text="Enter Your Email:">
+               <font>
+                  <Font name="Old Antic Decorative" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="139.0" prefHeight="7.0" prefWidth="135.0" text="Enter Password:">
+               <font>
+                  <Font name="Old Antic Decorative" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

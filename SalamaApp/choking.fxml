@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane id="AnchorPane" prefHeight="451.0" prefWidth="651.0" style="-fx-background-color: #fff3e2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectap.ViewControl.video5">
+   <children>
+      <MediaView fx:id="video5" fitHeight="350.0" fitWidth="500.0" layoutX="76.0" layoutY="14.0" />
+      <Button fx:id="play5" layoutX="103.0" layoutY="376.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #9BABB8;">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/play-button.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="pause5" layoutX="300.0" layoutY="376.0" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #9BABB8;">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/pause.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="reset5" layoutX="502.0" layoutY="376.0" mnemonicParsing="false" onAction="#resetMedia" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #9BABB8;">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/turn-down.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ImageView fx:id="back" fitHeight="21.0" fitWidth="26.0" layoutX="34.0" layoutY="24.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/left-arrow.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

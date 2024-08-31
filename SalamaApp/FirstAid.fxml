@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="651.0" style="-fx-background-color: #fff3e2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectap.ViewControl.FirstAidControl">
+   <children>
+      <Pane layoutX="68.0" layoutY="-78.0" prefHeight="155.0" prefWidth="514.0" style="-fx-background-color: ffcc99; -fx-background-radius: 88;">
+         <children>
+            <Text fill="WHITE" layoutX="174.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First  Aid" wrappingWidth="166.0025634765625">
+               <font>
+                  <Font name="Urdu Typesetting Bold" size="45.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="160.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose one of the cases">
+               <font>
+                  <Font name="Urdu Typesetting" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <ImageView fx:id="back1" fitHeight="21.0" fitWidth="26.0" layoutX="14.0" layoutY="96.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/left-arrow.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <VBox layoutX="76.0" layoutY="131.0" prefHeight="315.0" prefWidth="497.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Pane fx:id="drVideo" onMouseClicked="#goVideo1" prefHeight="100.0" prefWidth="152.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/nose-bleeding.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="45.0" layoutY="74.0" text="Epistaxis">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Pane>
+                  <Pane fx:id="blVideo" onMouseClicked="#goBleeding" prefHeight="100.0" prefWidth="152.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/cut.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="45.0" layoutY="74.0" text="Bleeding">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Pane>
+                  <Pane fx:id="stVideo" onMouseClicked="#goStroke" prefHeight="63.0" prefWidth="152.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/headache.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="53.0" layoutY="74.0" text="Stroke">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Pane>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Pane fx:id="burns" onMouseClicked="#goBurns" prefHeight="100.0" prefWidth="152.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/burn.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="56.0" layoutY="74.0" text="Burns">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Pane>
+                  <Pane fx:id="choking" onMouseClicked="#goChoking" prefHeight="100.0" prefWidth="152.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/hoarseness.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="46.0" layoutY="74.0" text="Choking">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Pane>
+                  <Pane fx:id="CPR" onMouseClicked="#goCPR" prefHeight="100.0" prefWidth="152.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/cpr.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="62.0" layoutY="74.0" text="CPR">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Pane>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Pane fx:id="broken" onMouseClicked="#goBroken" prefHeight="100.0" prefWidth="152.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/broken-bone.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="51.0" layoutY="74.0" text="Broken">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Pane>
+                  <Pane fx:id="fire" onMouseClicked="#goFire" prefHeight="100.0" prefWidth="152.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/flame.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="62.0" layoutY="74.0" text="Fire">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Pane>
+                  <Pane fx:id="seizure" onMouseClicked="#goSeizure" prefHeight="100.0" prefWidth="152.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="97.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/seizure.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="50.0" layoutY="74.0" text="Seizure">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Pane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fx:id="home1" fitHeight="21.0" fitWidth="26.0" layoutX="616.0" layoutY="96.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectap.ViewControl.InShcoolControl">
+   <children>
+      <Pane layoutX="-1.0" layoutY="-6.0" prefHeight="470.0" prefWidth="651.0" style="-fx-background-color: #fff3e2;">
+         <children>
+            <HBox alignment="CENTER" layoutX="219.0" layoutY="423.0" prefHeight="33.0" prefWidth="214.0" spacing="20.0">
+               <children>
+                  <Circle fill="#97efa6" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#c9f6a3" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#bcedf7" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#efb0f4" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#e9f2ba" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#c3dbf2" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </HBox>
+            <Button fx:id="bt" layoutX="255.0" layoutY="371.0" mnemonicParsing="false" onAction="#doneMsg" prefHeight="25.0" prefWidth="140.0" text="Done" />
+            <ImageView fx:id="back9" fitHeight="21.0" fitWidth="26.0" layoutX="14.0" layoutY="92.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/left-arrow.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="69.0" layoutY="-63.0" prefHeight="155.0" prefWidth="514.0" style="-fx-background-color: ffcc99; -fx-background-radius: 88;">
+               <children>
+                  <Text fill="WHITE" layoutX="168.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Shcool" wrappingWidth="177.33587646484375">
+                     <font>
+                        <Font name="Urdu Typesetting Bold" size="45.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="147.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please mark every action you take">
+                     <font>
+                        <Font name="Urdu Typesetting" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <VBox layoutX="69.0" layoutY="163.0" prefHeight="144.0" prefWidth="226.0" spacing="10.0">
+               <children>
+                  <CheckBox fx:id="c1" mnemonicParsing="false" prefHeight="28.0" prefWidth="244.0" text="CheckBox" textFill="#0b0b0b" />
+                  <CheckBox fx:id="c2" mnemonicParsing="false" prefHeight="28.0" prefWidth="244.0" text="CheckBox" textFill="#151515" />
+                  <CheckBox fx:id="c3" mnemonicParsing="false" prefHeight="28.0" prefWidth="244.0" text="CheckBox" textFill="#151515" />
+                  <CheckBox fx:id="c4" mnemonicParsing="false" prefHeight="28.0" prefWidth="244.0" text="CheckBox" textFill="#151515" />
+               </children>
+            </VBox>
+            <VBox layoutX="357.0" layoutY="163.0" prefHeight="144.0" prefWidth="226.0" spacing="10.0">
+               <children>
+                  <CheckBox fx:id="c5" mnemonicParsing="false" prefHeight="28.0" prefWidth="244.0" text="CheckBox" textFill="#0b0b0b" />
+                  <CheckBox fx:id="c6" mnemonicParsing="false" prefHeight="28.0" prefWidth="244.0" text="CheckBox" textFill="#151515" />
+                  <CheckBox fx:id="c7" mnemonicParsing="false" prefHeight="28.0" prefWidth="244.0" text="CheckBox" textFill="#151515" />
+                  <CheckBox fx:id="c8" mnemonicParsing="false" prefHeight="28.0" prefWidth="244.0" text="CheckBox" textFill="#151515" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
